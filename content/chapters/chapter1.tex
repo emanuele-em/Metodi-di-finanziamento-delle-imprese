@@ -1,4 +1,5 @@
 \chapter{Finanziamento delle imprese in mercati imperfetti}
+
 \label{sec:Finanziamento delle imprese in mercati imperfetti}
 
 \begin{itemize}
@@ -12,9 +13,9 @@ Secondo il modello semplificato di Modigliani Miller ci sono le seguenti assunzi
 
 \begin{itemize}
     \item Perfetta competizione
-        \subitem Non ci sono costi di transazione, le imprese e gli individui non pagano tasse
-        \subitem Tutti gli agenti (imprese e individui) sono price taker, possono quindi tutti contrarre dei prestiti nelle medesime condizioni
-        \subitem L'informazione è completa
+          \subitem Non ci sono costi di transazione, le imprese e gli individui non pagano tasse
+          \subitem Tutti gli agenti (imprese e individui) sono price taker, possono quindi tutti contrarre dei prestiti nelle medesime condizioni
+          \subitem L'informazione è completa
     \item Non ci sono opportunitá di arbitraggio: un'opportunitá di arbitraggio è la Possibilitá di ottenere profitti \textbf{certi} a fronte di \textbf{rischi futuri nulli}, le opportunitá di arbitraggio, data la loro potenza si esauriscono in tempi brevissimi, tutti gli arbitraggisti sono alla ricerca di queste opportunitá e vengono sfruttati algoritmi per poter essere competivi. Le opportunitá di arbitraggio garantiscono un continuo aggiustamento del prezzo.
     \item Le decisioni aziendali non hanno influenza sui cash-flow generati dagli investimenti
 \end{itemize}
@@ -26,7 +27,7 @@ Secondo il modello semplificato di Modigliani Miller ci sono le seguenti assunzi
 
 Secondo una differente lettura è possibile affermare che tramite il \textit{market value balance sheet of the firm}, ovvero un bilancio non contabile ma basato solo sui valori di mercato presenti, possiamo capire che in un mondo ideale di Modigliani Miller dovremmo preoccuparci solamente dell'attivo e non del passivo: tutte le variazioni di passività sono quindi un semplice riflesso delle variazioni delle attività che diventano quindi un loro sottostante.
 
-Questa affermazione è di fondamentale importanza perchè ci permette di comprendere quale sia l'importo massimo di finanziamento ottenibile: \textbf{Il valore dell'attivo}.
+Questa affermazione è di fondamentale importanza perchè ci permette di comprendere quale sia l'importo massimo di finanziamento ottenibile: il valore delle attività.
 
 I.e. Se un impresa in possesso di uno stabilimento funzionante ha intenzione di finanziare un nuovo progetto, può ottenere al massimo il valore dello stabilimento come finanziamento, i flussi di cassa attesi finanzieranno solo al massimo il valore di mercato dell'attivo.
 
@@ -34,10 +35,267 @@ In altre parole:
 Un'impresa può \textit{pledge} (impegnare) cioè può credibilmente offrire agli investitori esterni, al massimo il valore presente degli assets in suo possesso. È quindi presente un limite naturale al finanziamento esterno.
 
 \subsection{Seconda proposizione di Modigliani Miller}
-\begin{theorem}
-    \begin{equation} \label{eq:proposition2}
-        \begin{gathered}
-            r_E=r_U+\frac{D}{E}*(r_U-r_D)
-        \end{gathered}
+
+\begin{equation} \label{eq:proposition2}
+    \begin{gathered}
+        r_E=r_U+\frac{D}{E}*(r_U-r_D)
+    \end{gathered}
+\end{equation}
+\begin{conditions*}
+    r_E &   ritorno atteso nelle imprese levered (costo del capitale Equity)\\
+    r_U         &   ritorno atteso imprese Unlevered \footnote{Le imprese Unlevered sono le imprese che non fanno ricorso al capitale di debito, chiamate imprese all equity} \\
+    r_D         &   ritorno atteso sul debito (costo del debito o interessi sul debito) \\
+    \frac{D}{E} &   tasso di leva, leverage ratio sulle imprese levered \footnote{Le imprese Levered sono le imprese che fanno ricorso al capitale di debito}
+\end{conditions*}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter1/1.jpg}
+    \caption{Grafico condizioni base Modigliani Miller}
+    \label{fig:curva_mm}
+\end{figure}
+
+\begin{itemize}
+    \item Il costo dell'equity (\(r_E\)) aumenta perchè l'equity è rischioso
+    \item Senza rischi di bancarotta (ipotesi base), il costo del debito (\(r_D\)) è costante, pari al tasso di interesse
+    \item Il costo del capitale (\(r_{WACC}\)) è indipendente dalla struttura del capitale, valore di ritorno atteso delle imprese Unlevered (\(r_U\))
+\end{itemize}
+
+Il tasso di interesse quindi è più alto tanto maggiore è la rischiositá.
+
+\section{Agency Frictions}
+
+\subsection{Moral Hazard}
+
+Quando degli individui chiedono un finanziamento, il creditore assegna un credit score, il credit score viene formulato in base a dei criteri che dipendono dal creditore.
+
+Il credit score riassume la capacità di rimborsare i debiti. Tanto più è alto il tasso di interesse tanto più sarà rischioso il progetto per il quale si richiede il credito, tanto più sará basso il credit score assegnato.
+
+I finanziamenti ad alto tasso di interesse invogliano i creditori (imprese) ad effettuare investimenti ad alto rischio, perchè gli investimenti ad alto rischio sono anche quelli più remunerativi e permettono, in caso di successo, di riuscire a guadagnare oltre che rimborsare gli interessi molto alti. Questi incentivi ci sono solamente se le imprese sono a responsabilitá limitata per gli imprenditori, ovvero se gli imprenditori non rispondono con il capitale proprio neanche nel caso di insolvenza.
+
+Si ha \textit{Moral hazard} quando chi prende decisioni non ha gli interessi allineati con chi possiede l'impresa (azionisti), cioè quando la proprietá è separata dal controllo.
+
+\subsubsection{Modello base di Moral Hazard}
+
+\begin{itemize}
+    \item Un imprenditore che decide, ha bisogno di finanziamenti e ha due progetti differenti da realizzare in via esclusiva (o il progetto \(H\) o il progetto \(L\))
+    \item I due progetti hanno bisogno dello stesso finanziamento \(I\) per poter essere realizzati
+    \item L'imprenditore è in possesso di liquiditá ma non sufficiente a coprire \(I\)
+    \item Il progetto \(H\) a \(t=1\)
+          \subitem paga \(R>0\)  se ha successo con probabilitá \(p_H\)
+          \subitem paga \(0\) se fallisce con probabilitá  \(1-p_H\)
+    \item Il progetto \(L\) a \(t=1\)
+          \subitem paga \(R>0\)  se ha successo con probabilitá \(p_L\)
+          \subitem paga \(0\) se fallisce con probabilitá  \(1-p_L\)
+    \item \(\Delta p=p_H-p_L>0\) questo significa che \(p_H > p_L\)
+    \item l'imprenditore preferisce, per questioni personali, il progetto \(L\), ha quindi un beneficio privato \(B>0\)
+    \item \(H\) è efficiente mentre \(L\) no: \(p_H*R-I > 0\), \(p_L*R-I < 0\)
+    \item Tutti gli investitori sono neutrali al rischio, il tasso di interesse risk free è uguale a \(0\)
+    \item Gli investitori sono competitivi, all'equilibrio hanno un profitto nullo
+\end{itemize}
+
+In questo caso il Moral Hazard esiste in quanto gli investitori non possono forzare la scelta di uno o l'altro progetto. Quando viene firmato il contratto di finanziamento l'imprenditore sceglie il progetto, se il progetto scelto fallisce è impossibile provare il Moral Hazard anche perchè questo può essere addirittura inconsapevole. Escludendo le frodi l'ipotesi alla base del modello non è quindi realistica.
+
+Se il progetto ha successo l'imprenditore guadagna \(R_B\), gli investitori guadagnano \(R-R_B=R_L\) dove 
+\begin{itemize}
+    \item \(R_B=R_{borrower}=\text{Compenso dell'imprenditore}\)
+    \item \(R_L=R_{lender}=\text{Compenso degli investitori esterni}\)
+\end{itemize}
+Se il progetto il payoff è nullo.
+
+Per compensare il Moral Hazard occorre incentivare l'imprenditore a scegliere \(H\), dato che preferisce \(L\), portando così in equilibrio la preferenza.
+
+\subsection{Vincolo di compatibilità degli incentivi}
+
+\begin{equation}\label{eq:compatibilita}
+    \begin{gathered}
+        p_H*R_B \geq p_l*R_B + B \\
+        R_B \geq \frac{B}{\Delta p}
+    \end{gathered}
+\end{equation}
+\begin{conditions*}
+    p_H*R_B &   valore atteso del guadagno dell'imprenditore \\
+    p_l*R_B + B &   ammontare dei benefici privati dell'imprenditore se sceglie il suo progetto preferito e il progetto ha successo. Il beneficio è quindi tradotto in €, si calcola sapendo quando sarebbe disposto a pagare l'imprenditore per scegliere il progetto \(L\) piuttosto che il progetto \(H\)
+\end{conditions*}
+
+All'interno dell'equazione \ref{eq:compatibilita} andrebbe considerato anche il caso di insuccesso con probabilitá \(1-p_H\) e \(1-p_L\) ma in questo specifico caso di esempio il beneficio in caso di insuccesso è pari a \(0\) perciò non viene considerato
+
+L'incentivo genera un limite che i finanziatori esteri si aspettano giá, offrendo infatti un \(R_B\) maggiore all'imprenditore gli investitori sono consapevoli che a loro spetterá solamente il residuo corrispondente al cosiddetto \textit{Pledgeble Income}
+
+\begin{equation}\label{eq:pledgebleIncomeStandard}
+    p_H*(R-\frac{B}{\Delta p})
+\end{equation}
+Infatti il valore \(\frac{B}{\Delta p}\) è il compenso dell'imprenditore. Questo compenso viene dato solo in caso di successo del progetto, in caso di insuccesso infatti tutti gli individui ottengono un payoff nullo.
+
+\subsection{Vincolo di Partecipazione}
+
+Il \textit{vincolo di partecipazione} per gli investitori corrisponde al limite per gli investitori esterni sotto il quale non sono disposti a concedere il finanziamento:
+
+\begin{equation} \label{eq:vincoloPartecipazione}
+    p_H*(R-\frac{B}{\Delta p}) \geq I - A
+\end{equation}
+\begin{conditions*}
+    p_H*(R-\frac{B}{\Delta p})  &   Pledgeble Income \\
+    I-A &   Ammontare dei finanziamenti esterni, in particolare \(I\) è l'ammontare dell'investimento totale mentre \(A\) è l'investimento personale dell'imprenditore
+\end{conditions*}
+
+Isolando \(A\) dalla \ref{eq:vincoloPartecipazione}:
+
+\begin{equation}
+    A \geq p_H*\frac{B}{\Delta p} - (p_H*R - I)
+\end{equation}
+\begin{conditions*}\label{eq:vincoloPartecipazioneA}
+    p_H*\frac{B}{\Delta p}  &   \(p_H*R_B\) = Payoff atteso \\
+    p_H*R-I &   NPV del progetto (Net Present Value: valore attuale netto)
+\end{conditions*}
+Ne consegue che \(A\), nonchè l'investimento personale dell'imprenditore, deve avere un valore minimo, il progetto quindi non riceve finanziamenti esterni se prima non ha ricevuto finanziamenti direttamente dall'imprenditore.
+
+La conseguenza è duplice;
+\begin{itemize}
+    \item \textbf{Cattive notizie per l'imprenditore}: se non si ha la disponibilitá di un capitale di almeno \(A\), il progetto non può essere eseguito.
+     
+    \item \textbf{Buone notizie per l'imprenditore}: se l'imprenditore disponde di un capitale investibile \(A\) allora, una volta che il progetto ha successo, l'imprenditore stesso incassa una quasi rendita, grazie al vincolo di compatibilitá degli incentivi rappresentato dall'equazione \ref{eq:compatibilita} riesce ad appropriarsi di tutto il valore attuale netto del progetto (NVP).
+    
+    \[
+        p_H*R_B-A = \underbrace{p_H*R-I}_{all'imprenditore} > 0
+    \]
+          
+    La difficoltá sta quindi nel superare il vincolo di partecipazione \ref{eq:vincoloPartecipazioneA} dovuto al Moral Hazard, superato il vincolo l'imprenditore è in grado di guadagnare molto di più degli investitori esterni.
+\end{itemize}
+
+\subsubsection{Domande di riepilogo}
+
+\begin{enumerate}
+    \item Nel modello presentato, gli investitori si aspettano un interesse positivo in caso in cui l'imprenditore scelga il progetto \(H\)?
+
+    Supponendo che il vincolo di partecipazione \ref{eq:vincoloPartecipazioneA} sia soddisfatto il tasso di interesse rimane comunque positivo, il rischio del progetto non è infatti pari a zero, unica condizione che permetterebbe un tasso idealmente nullo.
+    \begin{equation}\label{eq:condizioner}
+        \begin{split}
+            p_H(1+r)    &=  1\\
+            r   &=  \frac{1}{p_H}-1 \geq 0 
+        \end{split}
     \end{equation}
-\end{theorem}
+    L'equzione \ref{eq:condizioner} è valida perchè essendo \(p_H\) una probabilitá non potrà avere un valore superiore a 1 (caso ideale) in nessun caso.
+
+    È importante capire che i finanziatori fissano un tasso di interesse \(r\) a priori, da quel tasso di interesse poi si calcola a ritroso il valore di \(R_B\) e \(R_L\), il guadagno degli investitori è quindi implicito nel tasso di interesse stabilito.
+
+    \item Quanto incide sulla possibilitá di ottenre un finanziamento se gli investitori ottengono una quota del payoff del progetto molto più bassa rispetto all'imprenditore?
+
+    Dato il vincolo di compatibilità degli incentivi \ref{eq:compatibilita} se \(R_B\) aumenta causa una diminuzione di \(R_L\).
+
+    Dato il vincolo \ref{eq:vincoloPartecipazioneA}, aumentando il termine \(\frac{B}{\Delta p}\) il vincolo diventa piu stringente perché per rispettarlo occorre che \(A\) aumenti in proporzione.
+
+    La conseguenza è che quando conferisco una maggiore quota del payoff all'imprenditore piuttosto che agli investitori è più difficile ottenere il finanziamento ma sará più semplice verificare il vincolo di compatibilità degli incentivi \ref{eq:compatibilita} (\(R_B\geq \frac{B}{\Delta p}\))
+\end{enumerate}
+
+\subsection{Soluzioni al Moral Hazard}
+
+Se l'imprenditore ha abbastanza soldi financia il so progetto, se non li ha allora non lo finanzia: questa ipotesi è troppo semplicistica, ci sono casi in cui A=0 e il progetto viene comunque finanziato. Escludendo i sussidi perpetrati dalle istituzioni, che rendono il finanziatore in perdita, ci sono diverse alternative per sconfiggere almeno in parte il Moral Hazard che rendono la soluzione comunque efficace per il finanziatore. 
+
+\begin{itemize}
+    \item Micro credito (Group Lending)
+    \item Diversificazione dei progetti: l'imprenditore anzichè investire in un solo progetto, se disponde di più idee, può diversificare l'investimento e investire in più progetti scorrelati tra loro per incrementare le possibilitá di successo
+    \item Collaterizzazione: garanzie in caso di insolvenza date ai creditori
+    \item Reputazione dell'imprenditore: se l'imprenditore ha uno storico importante di successi, la sua storia fa da garante per i suoi progetti futuri
+    \item Convenants (clausole contrattuali): si dividono a loro volta in:
+        \subitem Clausole del fare
+        \subitem Clausole del non fare
+        \subitem Clausole legate agli indici
+\end{itemize}
+
+\subsubsection{Micro credito (Group Lending)}
+
+Non si offre credito ad un solo imprenditore ma si offre ad un gruppo di imprenditori legati tra di loro da un vincolo: ogni imprenditore risponde anche in caso di insolvenza di un'altro imprenditore dello stesso gruppo.
+
+Questa tecnica di finanziamento ha successo soprattutto nei casi in cui c'è molta solidarietà tra gli imprenditori appartenenti al gruppo.
+
+Le condizioni sono:
+\begin{equation} \label{eq:conditionsMicro}
+    \begin{gathered}
+        A<\overline{A} \\
+        0<a<1
+    \end{gathered}    
+\end{equation}
+\begin{conditions*}
+    A < \overline{A} &   Disponibilitá economica (\(A\)) molto inferiore rispetto alla disponibilitá economica del caso standard (\(\overline{A}\))  \\
+    a   &   solidarietà tra gli impreditori appartenenti ad un Group Lending
+\end{conditions*}
+
+Il \textit{Vincolo di compatibilità degli incentivi} diventa:
+\begin{equation}\label{eq:compatibilitaIncentiviMicro}
+    \begin{gathered}
+        p_H^2(R_B+a*R_B) \geq p_Hp_L(R_B+a*R_B) + B\\
+        p_HR_B \geq \frac{B}{(1+a)\Delta p}
+    \end{gathered}
+\end{equation}
+\begin{conditions*}
+    p_HR_B &   Minimo ammontare \(R_B\) da attrivuire agli imprenditori per essere sicuri che scelga \(H\)
+\end{conditions*}
+
+Ogni imprenditore può \textit{Pledge}, ovvero ogni investitore ha un \textit{Pledgeble Income} di:
+
+\begin{equation} \label{eq:pledgebleIncomeMicro}
+    p_H(R-\frac{B}{(1-a)\Delta p})
+\end{equation}
+\begin{conditions*}
+    \frac{B}{(1-a)\Delta p} > \frac{B}{\Delta p} &  Il denominatore è aumentato in questo caso di \(1-a\), valore correlato direttamente con l'intesa che c'è tra gli imprenditori del gruppo
+\end{conditions*}
+
+Il \textit{Pledgeble Income} è quindi direttamente proporzionale con l'intesa che c'è tra gli imprenditori del gruppo ed è sicuramente più alto rispetto al caso standard di credito ad un singolo imprenditore. In presenza di Micro Credito o Group Lending sará quindi più facile ottenere un finanziamento.
+
+Il fatto che ci sia un interesse comune da incentivo agli imprenditori a fare la scelta realisticamente più redditizia, si tratta quindi di una soluzione al Moral Hazard
+
+\subsubsection{Riepilogo Soluzioni Moral Hazard}
+
+    \begin{enumerate}
+        \item A chi interessa di più combattere il moral hazard? Al creditore, al debitore o al debitore potenziale?
+        
+        Il debitore potenziale è quello più coinvolto: il creditore suppone che in caso di concessione del finanziamento, si è giá tenuti conto del rischio di Moral Hazard, allo stesso modo il debitore durante la discussione delle clausole, se il progetto è giá stato finanziato allora il moral hazard è giá stato tenuto in conto. Il debitore potenziale è invece quello più interessato.
+    \end{enumerate}
+
+\subsection{Debt Overhang o Peso Eccessivo del Debito}
+
+    Il Debt Overhang è un altro caso, come il Moral Hazard, in cui si verifica una diminuzione di disponibilitá a concedere credito. In presenza di un debito pregresso infatti i finanziatori saranno meno propensi a finanziare.
+
+    I.E. La crisi del 2008 è un esempio concreto di Debt Overhang, dopo lo scoppio della bolla le banche concedevano pochissimo credito, molto meno anche del pre-crisi.
+
+    Il \textit{Pledgeble Income} è uguale alla \ref{eq:pledgebleIncomeStandard}, il nuovo \textit{Vincolo di partecipazione} tiene però conto del debito pregresso \(D\):
+
+    \begin{equation}
+        p_H(R-\frac{B}{\Delta p} - (I-A) - D > 0)
+    \end{equation}
+    \begin{conditions*}
+        D &  Debito pregresso che non va ai nuovi finanziatori ma ai finanziatori pregressi
+    \end{conditions*}
+
+    Isolando la \(A\):
+    \begin{equation} \label{eq:vincoloPartecipazioneDebt}
+        A > \overline{A}+D
+    \end{equation}
+   
+    Il vincolo \ref{eq:vincoloPartecipazioneDebt} è quindi ancora più strinente rispetto a \ref{eq:vincoloPartecipazioneA}, l'imprenditore deve quindi investire tanti più soldi tanto più alto è il suo debito pregresso.
+
+\subsection{Soluzioni al Debt Overhang}
+
+    \begin{enumerate}
+        \item Rinegoziare i debiti con i creditori: difficile da attuare se i creditori sono molti e hanno una piccola quota del debito ciascuno
+        \item Ricapitalizzare il debito eccessivo
+    \end{enumerate}
+
+\subsubsection{Domande di riepilogo sul Debt Overhang}
+È vero affermare che se i nuovi creditori che hanno giá acquistato il nostro debito allargano il \textit{Debt Overhang} il costo aggiunto peserà sugli azionisti dell'impresa molto di più rispetto al caso in cui non ci fosse questo debito pregresso?
+
+Si, anche se siamo azionisti e non obbligazionisti non siamo al riparo da questo meccanismo, infatti il debito costerà molto di più.
+
+\subsection{Asimmetrie informative, Selezione Avversa}
+
+Fin'ora abbiamo parlato solo di Moral Hazard ma esiste anche la \textit{Selezione Avversa} ovvero le asimmetrie informative.
+
+i.e. Nel 2008 il Libro, tasso di scambio di prestiti tra le banche, sfiorava il 20\% annuo, questo perchè le banche conoscevano solo lo stato personale e non lo stato delle altre, questa mancanza di fiducia rendeva estremamente costosi i prestiti anche interni.
+
+Le conseguenze possono essere anche disastrose:
+\begin{itemize}
+    \item Market Breakdown: fallimento di mercato
+    \item Over/Under Investimenti e Cross-subsidization: il secondo termine indica quando qualcuno paga troppo e sussidia, inconsapevolmente, chi paga troppo poco. Il caso più diffuso è quello delle tasse
+    \item Razionamento del credito
+\end{itemize}
