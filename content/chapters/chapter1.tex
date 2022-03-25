@@ -63,7 +63,7 @@ Un'impresa può \textit{pledge} (impegnare) cioè può credibilmente offrire agl
 
 Il tasso di interesse quindi è più alto tanto maggiore è la rischiositá.
 
-\section{Moral Hazard}
+\section{Moral Hazard} \label{sec:moralHazard}
 
 Quando degli individui chiedono un finanziamento, il creditore assegna un credit score, il credit score viene formulato in base a dei criteri che dipendono dal creditore.
 
@@ -88,7 +88,7 @@ Si ha \textit{Moral hazard} quando chi prende decisioni non ha gli interessi all
     \item \(\Delta p=p_H-p_L>0\) questo significa che \(p_H > p_L\)
     \item l'imprenditore preferisce, per questioni personali, il progetto \(L\), ha quindi un beneficio privato \(B>0\)
     \item \(H\) è efficiente mentre \(L\) no: \(p_H*R-I > 0\), \(p_L*R-I < 0\)
-    \item Tutti gli investitori sono neutrali al rischio, il tasso di interesse risk free è uguale a \(0\)
+    \item Tutti gli investitori sono neutrali al rischio\footnote{Un operatore economico si dice neutrale al rischio quando le sue preferenze lo rendono indifferente al compiere un'azione il cui risultato dipende da un elemento aleatorio, oppure rimanere nella situazione in cui si trova.}, il tasso di interesse risk free è uguale a \(0\)
     \item Gli investitori sono competitivi, all'equilibrio hanno un profitto nullo
 \end{itemize}
 
@@ -286,6 +286,7 @@ Il fatto che ci sia un interesse comune da incentivo agli imprenditori a fare la
 Si, anche se siamo azionisti e non obbligazionisti non siamo al riparo da questo meccanismo, infatti il debito costerà molto di più.
 
 \section{Asimmetrie informative, Selezione Avversa}
+\label{sec:selezionaAvversa}
 
 Fin'ora abbiamo parlato solo di Moral Hazard ma esiste anche la \textit{Selezione Avversa} ovvero le asimmetrie informative.
 
@@ -297,3 +298,297 @@ Le conseguenze possono essere anche disastrose:
     \item Over/Under Investimenti e Cross-subsidization: il secondo termine indica quando qualcuno paga troppo e sussidia, inconsapevolmente, chi paga troppo poco. Il caso più diffuso è quello delle tasse
     \item Razionamento del credito
 \end{itemize}
+
+\subsection{Razionamento Finanziario dovuto all'asimmetria informativa}
+
+Si ipotizzi che non ci sia Moral Hazard, anche l'imprenditore ha quindi interesse nella redditivitá dell'impresa, esistono però due tipi di imprenditore:
+\begin{itemize}
+    \item tipo \(G\): paga \(R>0\) al tempo \(t=1\), può avere successo con probabilitá \(p\) e non avere successo con probabilitá \(1-p\)
+    \item tipo \(B\): paga \(R>0\) al tempo \(t=1\), può avere successo con probabilitá \(q<p\) e non avere successo con probabilitá \(1-q\), \(B\) è meno bravo rispetto a \(G\), vale quindi la condizione \(1>p>q>0\)
+\end{itemize}
+
+Nel caso di informazione asimmetrica l'imprenditore conosce la propria abilitá, il finanziatore non la conosce quindi decide di stimare la probabilitá che l'imprenditore in questione sia di tipo \(G\), la probabilitá che l'imprenditore sia di tipo \(G\) quindi sia bravo è \(\alpha\). La qualitá media del progetto nell'ottica dell'investitore è rappresentata dalla seguente equazione:
+
+\begin{equation} \label{eq:qualitaImprenditoreMedia}
+    m=\alpha p + (1-\alpha)q
+\end{equation}
+\begin{conditions*}
+    m & qualitá dell'imprenditore stimata con media probabilistica \\
+    \alpha & probabilitá che l'imprenditore sia \textit{capace} \\
+    p & probabilitá di \textit{successo} di un imprenditore \textit{capace} \\
+    (1-\alpha) & probabilitá che l'imprenditore sia \textit{non capace} \\
+    q & probabilitá di \textit{successo} di un imprenditore \textit{non capace}\\
+\end{conditions*}
+
+Il progetto di tipo \(G\) è efficiente, il progetto di tipo \(B\) non lo è:
+\[
+  \underbrace{pR-I}_{G} > 0 > \underbrace{qR-I}_{B}
+\]
+
+Questa situazione va verificata prima di firmare il contratto
+
+\subsubsection{Ipotesi: Allocazione efficiente - informazione Simmetrica}
+
+Gli investitori sanno quale progetto è di tipo \(G\) e quale progetto è di tipo \(B\) (\textit{first best}), si effettua quindi l'allocazione più efficiente possibile. In termini attesi l'imprenditore ottiene:
+\begin{itemize}
+    \item \(pR_b^G\) se il progetto è di tipo \(G\)
+    \item \(pR_b^B\) se il progetto è di tipo \(B\)
+\end{itemize}
+
+I finanziatori sono in competizione tra loro, il profitto finale deve quindi essere nullo secondo la regola del mercato in concorrenza perfetta quindi:
+
+\begin{itemize}
+    \item \(p(R-R_b^G)=I\) se il progetto è di tipo \(G\)
+    \item \(q(R-R_b^B)=I\) se il progetto è di tipo \(G\), cambia il reddito atteso rispetto al tipo \(G\)
+\end{itemize}
+\begin{conditions*}
+    R_b^G & compenso dell'imprenditore \(G\)\\
+    R_b^B & compenso dell'imprenditore \(B\)\\
+    p(R-R_b^G) & reddito netto del finanziatore \\
+    I & Costi
+\end{conditions*}
+
+La quota massima del reddito si ricava dalle equazioni sopra:
+
+\begin{itemize}
+    \item \(R_b^G = R - \frac{I}{p}\)
+    \item \(R_b^B = R - \frac{I}{q}\)
+\end{itemize}
+
+Il compenso dell'investimento (cioè il tasso di interesse) sará inversamente proporzionale alla probabilitá di successo, nel caso in cui la probabilitá di successo sará maggiore (caso \(G\)) allora il tasso di interesse sará minore.
+
+Dato \(qR<I\) l'unico modo per ottenere il finanziamento sarebbe quello di pagare il finanziatore con tutto il ricavato più un'ulteriore somma aggiuntiva. La conclusione è che nel caso di progetto \(B\) il finanziatore non investe.
+
+La teoria dell'allocazione efficiente rimane comunque non realizzabile, l'informazione infatti non è simmetrica nella realtá, la conseguenza è che le banche firmano un solo tipo di contratto con tutti i tipi di imprenditore, sia nel caso in cui l'investimento sia un buon investimento (caso \(G\)), sia nel caso in cui non si accorgano che davanti si trovano un imprendtore non capace (caso \(B\)), il compenso dell'imprenditore sará quindi lo stesso e varrá generalmente \(R_b\):
+\[
+    m(R-R_b)=I  
+\]
+sapendo che:
+\[
+    m=\alpha p + (1-\alpha)q  
+\]
+il tasso di interesse viene implicitamente fissato dalla formula calcolata al tempo \(t=1\):
+\begin{align*}
+    m(R-R_b) &= I(1+i)\\
+    i &= \frac{m(R-R_b)}{I}-1
+\end{align*}
+
+La conseguenza di questa informazione asimmetrica è duplice:
+\begin{itemize}
+    \item \(mR<1\) \(m\) è bassa quindi la media di successo è bassa, ci sono molti imprenditori di tipo \(B\), non avviene il finanziamento se il finanziatore scopre questo rendimento negativo in anticipo oppure se decide di investire c'è sottofinanziamento\footnote{Sottofinanziamento perchè i progetti buoni vengono sottofinanziati dando più spazio ai progetti di tipo \(B\), considerati un cattivo investimento}
+    
+        \[
+            \left[ \alpha ^*p + (1-\alpha ^*)1 \right] R = I 
+        \]
+        \begin{conditions*}
+            \alpha ^* & la minima frazione di progetti di tipo \(G\) che garantiscono un pareggio per gli investitori
+        \end{conditions*}
+        Il mercato fallisce, si verifica un \textit{market breakdown}, in questi casi è necessario aumentare l'informazione diminuendo le asimmetrie informative. I.E. durante la pandemia COVID19 lo stato è intervenuto facendo da garante per il credito richiesto dagli imprenditori alle banche. Il costo per lo stato è molto elevato perchè la Possibilitá di fallimento in questo periodo era molto alta, ma in questo modo il paramentro \(m\) non aveva più senso di esistere per le banche che non ne tennero conto concedendo credito in misura maggiore a seguito delle valutazioni standard. 
+
+    \item \(R_b\) è tale che \(m(R-R_b=I)\), la banca finanzia sia gli imprenditori \(G\), sia gli imprenditori di tipo \(B\), le conseguenze sono molteplici tra cui:
+        \begin{itemize}
+            \item \(G\) pagato interessi più alti per colpa di B
+                \begin{align*}
+                    R-R_b &= I(1+r) \\
+                    r &= \frac{R-R_b}{I}-1\\
+                \end{align*}
+                \(r\) è un tasso maggiore rispetto al caso ideale in cui gli imprenditori sono tutti di tipo \(G\)
+                \[p(R-R_b)>I>q(R-R_b)\]
+                quindi gli imprenditori \(G\) sussidiano gli imprenditori \(B\)
+                \[
+                    R_b = R - \frac{1}{m} < R_b^G = R - \frac{1}{p} 
+                \]
+            \item Il costo del capitale di \(G\) è troppo elevato quindi qualche imprenditore di tipo \(G\) non entra nel mercato
+            \item Tanti progetti non efficienti di tipo \(B\) vengono finanziati comunque
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Domande di riepilogo}
+\begin{enumerate}
+    \item Quanto più gli investitori pensano sia ridotta la quota di progetti efficienti nell'insieme dei progetti che richiedono finanziamenti tanto più è probabile che ci sia un market breakdown sul mercato del credito?
+    
+    È vero perchè la quota di progetti efficienti è la \(m\)
+
+    \item Se il tasso di interesse sugli investimenti sicuri è positivo, allora è meno probabile vi sia un market breakdown?
+    
+    Falso
+\end{enumerate}
+
+\subsection{Market Timing}
+
+La teoria dell'informazione asimmetrica ha delle conseguenze interessanti e inaspettate. Si supponga di aumentare la probabilitá di successo di \(G\) e \(B\) di un valore \(\tau\) noto a tutti:
+\begin{align*}
+    G &\rightarrow p + \tau\\
+    B &\rightarrow q + \tau
+\end{align*}
+
+Negli occhi di un investitore, un aumento della probabilitá di successo sia per \(B\) che per \(G\) è equivalente a dire che gli imprenditori hanno un aumento della redditivitá su tutti quanti i progetti, non solo su una frazione di essi. Avere il \(\tau\) significa che il vincolo di partecipazione cambia anche se non si sa se si tratta di un progetto di tipo \(G\) o di tipo \(B\). La probabilitá di successo nell'ottica dell'investitore aumenta in media quindi gli investitori sono più ottimisti:
+\begin{align*}
+    \left[ \alpha(p+\tau) + (1-p)(1+\tau) \right](R-R_b) &= I\\
+    \left[ \alpha(p+\tau) + (1-p)(1+\tau) \right]R &> I\\
+    (m+\tau)R &> I\\
+\end{align*}
+
+quindi maggiore è \(\tau\) più c'è probabilitá che i progetti in generale vengano finanziati.
+
+Il market timing prevede la cosiddetta teoria del ciclo economico \footnote{\url{https://it.wikipedia.org/wiki/Ciclo_economico}} secondo la quale saranno sempre presenti momenti di espansione alternati a momenti di market breakdown
+
+\subsection{Certificazioni}
+
+Le certificazioni sono dei segnali credivili eseguiti da un agente esterno che certifica a banche o altri enti esterni (o più in generale al mercato nella sua interezza) la qualitá della redditivitá delle imprese che ne richiedono la dimostrazione. Richiedere una certificazione ha un prezzo perchè eseguire le dovute valutazioni richiede un tempo e un lavoro non indifferenti. L'ente certificatore, per la sua reputazione, ha l'incentivo a dire la veritá.
+
+Il costo di una certificazione \(c>0\) è pagato dalle imprese che hanno bisogno della certificazione e non da investitori o finanziatori dell'impresa, ma sono investitori e finanziatori che necessitano di queste informazioni. L'ente certificatore ha lo scopo di scoprire se l'impresa è di tipo \(B\) o di tipo \(G\). Se si considera il caso \(G\) definire \(R_b^G\) il massimo \textit{payoff} \(G\) che può ottenere in caso di certificazione:
+
+\subsubsection{nuovo Vincolo di partecipazione}
+
+\begin{equation}
+    \begin{split}
+        p(R-\widehat{R_b^G} )-c &= I\\
+        R_b^G &= R - \frac{I+c}{p}
+    \end{split}
+\end{equation}
+
+\begin{conditions*}
+    \widehat{R_b^G} \neq R_b^G & infatti il compenso dell'imprenditore in caso di certificazione è diverso dal compenso dell'imprenditore in assenza della stessa \\
+    c & Costo della certificazione, spesso non è trascurabile
+\end{conditions*}
+
+Se non si ottiene la certificazione si otterrá il risutlato:
+
+\begin{align*}
+    m(R-R_b)&=I\\
+    R_b &= R - \frac{I}{m}
+\end{align*}
+
+É conveniente possedere una certificazione solo sotto le seguenti condizioni:
+
+\begin{equation}
+    \begin{split}
+        R_b^G &> R_b\\
+        R - \frac{I+c}{p} &> R - \frac{1}{m}
+    \end{split}
+\end{equation}
+
+Quindi supponendo l'onestá  di tutte le parti in gioco, anche l'imprenditore ha convienienza ad essere certificato solo se valoglo le condizioni sopracitate.
+
+Si sotituisce ora \(m\) con la sua definizione \ref{eq:qualitaImprenditoreMedia} e si ottiene:
+
+\begin{equation}
+    \frac{c}{1+c} < (1-\alpha)\frac{p-q}{p}
+\end{equation}
+
+\begin{conditions*}
+    1-\alpha & Proporzione dei B (Bad)\\
+    (1-\alpha)\frac{p-q}{p} & in presenza di pochi G (Good), la loro proporzione diventa trascurabile
+\end{conditions*}
+
+In questo modo si capisce come la certificazione venga richiesta tutte le volte che \(c\) non sia troppo elevato e che convenga certificare solo quando effettivamente l'asimmetria informativa sia troppo elevata. Se a destra il numero è molto alto allora significa che si è in presenza di un universo con pochi G e molti B, se la media intorno all'imprenditore che vuole essere finanziato è molto bassa allora diventa più importante distinguersi dalla massa e questa regola è una regola generale.
+
+\subsection{Esempio Selezione avversa completo}
+
+Un'impresa può investire in un progetto con le seguenti caratteristiche:
+\begin{itemize}
+    \item Costo \(I=50\), l'imprenditore non ha fondi propria
+    \item Rendimento aleatorio:
+        \begin{itemize}
+            \item \(R=80\) in caso di successo 
+            \item \(R=0\) in caso di insuccesso
+        \end{itemize}
+    \item La probabilitá di avere successo (\(p\)) dipende dal talento \(\Theta\) dell'imprenditore:
+        \begin{itemize}
+            \item se \(\Theta = T\) allora \(p=0.8\)
+            \item se \(\Theta = NT\) allora \(p=0.4\)
+        \end{itemize}
+    \item L'imprenditore conosce il proprio \(\Theta\)
+    \item La banca o più in generale il finanziatore non sa se \(\Theta=T\) o se \(\Theta=NT\) però sa che la probabilitá \(\pi\) che \(\Theta = T\) su questi progetti, storicamente è 0.5
+    \item L'imprenditore che ottiene il credito è protetto da responsabilitá limitata
+    \item Sia la banca che l'imprenditore sono neutrali al rischio
+    \item Il costo opportunitá ad investire nel progetto per la banca è \(r=0\)
+    \item Il contratto di credito è semplice:
+        \begin{itemize}
+            \item La banca presta \(I=50\) all'imprenditore
+            \item L'imprenditore ripaga \(D\geq I\) (\(D\leq R\)) alla banca allo scadere del credito (quando il risultato \(R\) si realizza)
+        \end{itemize}
+\end{itemize}
+
+\subsubsection{Caso First Best}
+
+sis supponga che la banca conosca \(\Theta\) dell'imprenditore che chiede il finanziamento
+
+Risultati:
+\begin{itemize}
+    \item Allocazione efficiente
+    \item Solo gli imprenditori \(\Theta=T\) vengono finanziati
+    \item La banca ha profitti attesi nulli, il tasso di interesse è pari al 25\%
+    \item Imprenditore con \(\Theta = T\) guadagna l'intero \(NPV\) atteso del progetto
+\end{itemize}
+
+Si trova il \textit{Vincolo di partecipazione:}
+
+\begin{align*}
+    Reddito &= 50\\
+    0.8\times D + 0.2\times 0 &= 50\\
+    0.8\times D   &= 50\\
+    D &= \frac{50}{0.8} = 62.5
+\end{align*}
+
+Se non si fa fallimento allora viene ripagato alla banca 62.5, il tasso di interesse che ne deriva è:
+
+\[
+    r = \frac{62.5}{50} - 1 = 0.25 
+\]
+
+L'interesse è quindi implicito nel rimborso, la banca in questo caso ottiene un tasso pari a 0 su un mercato alternativo, Dato che sugli investienti alternativi ottiene 0 allora anche sull'investimento in questione (globalmente) deve ottenere 0 (in media), per ottenere un atasso pari a 0 in media la banca deve ottenere un tasso pari a 0.25 in caso in cui le cose vadano per il verso giusto perchè quando le cose vanno male perde i soldi investiti.
+
+Se invece si ha a che fare con un imprenditore di tipo B allora la probabilitá di successo è di 0.4:
+
+\begin{align*}
+    Reddito &= 50\\
+    0.4\times D + 0.6\times 0 &= 50\\
+    0.4\times D   &= 50\\
+    D &= \frac{50}{0.4} = 125
+\end{align*}
+
+Si noti che \(125 > 80\), il rendimento è molto piú alto e questo non rappresenta un controsenso ma la giustificazione ad un maggior rischio
+
+\subsubsection{Caso Informazione asimmetrica}
+
+\begin{itemize}
+    \item La banca non conosce il talento dell'imprenditore \(\Theta\)
+    \item Assegna quindi una probabilitá pari al 50\%
+\end{itemize}
+
+\[
+    E\left[R\right] = \underbrace{\frac{1}{2}\left[\cdots \right]}_{G} + \underbrace{\frac{1}{2}\left[\cdots \right]}_{B}
+\]
+
+\begin{conditions*}
+    E\left[R\right] & Reddito medio
+\end{conditions*}
+
+Una volta calcolato il reddito medio occorre capire se sia almeno pari all'investimento di 50:
+
+\begin{align*}
+    E\left[R\right] &= \frac{1}{2}\left[0.8\times D + 0.2\times 0\right] + \frac{1}{2}\left[0.4\times D + 0.6\times 0\right] =\\
+    &= 0.4\times D + 0.2\times D = \\
+    &= 0.6\times D = 50 \Rightarrow D = \frac{50}{0.6} = 83.3
+\end{align*}
+
+Essendo maggiore di 80 nessuno viene finanziato, se qualcuno venisse finanziato le condizion isarebbero un rimborso di 83 anche in caso di successo, quindi anche se il progetto fruttasse 80. Nessuno accetterebbe di pagare di più di quello che riuscirebbe ad ottenere nel migliore dei casi.
+
+Un modo alternativo di calcolare \(D\) è supporre che l'imprenditore abbia successo, ricavi quindi 80, poi restituisce il 100\% alla banca (caso limite), in questo caso infatti \[0.6\times 80 = 48\]
+
+Essendo \(48<50\) significa che il finanziatore, anche nel migliore dei casi sarebbe in perdita e non rientrerebbe dei suoi costi, ipotesi non realistica
+
+\subsection{Costo dello stato in caso di garanzia statale}
+
+La \textit{probabilitá di fallimento totale} vale:
+\begin{equation}
+    P_{\text{fallimento}} = \frac{1}{2}(0.2) + \frac{1}{2}(0.6) = 0.4
+\end{equation}
+
+Essendo la probabilitá di fallimento totale pari a 0.4 significa che lo stato nel 40\% dei casi dovrá pagare 50, il costo per lo stato in questo caso è quindi di\[50 \times 0.4 = 20\]
+
+20 è quindi il costo che deve prevedere lo stato nel fare garanzia di credito verso le banche per gli imprenditori
+
+

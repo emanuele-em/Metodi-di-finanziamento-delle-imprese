@@ -1,3 +1,540 @@
-\chapter{Razionemanto del credito}
+\chapter{Razionamento del credito}
 \label{sec:Razionamento del credito}
+
+Il mercato del credtio è quello specifico luogo dove potenziali debitori richiedoo fondi a potenziali creditori, include il mercato finanziario di titoli obbligazionari, il mercato di ibridi e il mercato del credito gestito da intermediari finanziari.
+
+Il credito è un prodotto a tutti gli effetti, con caratteristiche particolari:
+
+\begin{enumerate}
+    \item Il prezzo (interesse) viene pagato solo dopo la transazione (concessione del prestito)
+    \item Il venditore (creditore\footnote{banche o altro}) non è certo di essere pagato, più il creditore è soggetto ad incertezza più varia la curva di offerta del credito
+    \item È un rapporto principale-agente\footnote{Relazione di agenzia che si determina quando l'esito di un accordo contrattuale per una parte dipende dal comportamento dell'altra. Agente (o mandatario) è il soggetto che agisce, principale (o mandante) è il soggetto su cui incide l'azione dell'agente ed è colui che compie il comportamento da cui dipende l'esito.}
+\end{enumerate}
+
+Per questo tipo di prodtto vale il principio di \textit{Razionamento}.
+
+\section{Introduzione al razionamento del credito}
+
+\begin{definition}
+    Il mercato del credito è razionato quando imprese che domandano credito non lo ottengono neppure se sono disposte a pagare tassi di interesse più elevati di quelli di mercato
+\end{definition}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/1.jpg}
+    \caption{Razionamento del credito}
+    \label{fig:razionamentoCredito}
+\end{figure}
+
+Ci sono diversi fattori che influenzano l'offerta del credito:
+\begin{itemize}
+    \item Selezione avversa (vedi sezione \ref{sec:selezionaAvversa})
+        \begin{itemize}
+            \item Conseguenza nella microeconomia: vedi sezione (vedi sezione \ref{sec:selezionaAvversa})
+            \item Conseguenze nella macroeconomia: backward-bending\footnote{Come nella figura \ref{fig:razionamentoCredito}, si nota che fino ad un certo livello la curva cresce per poi avere un'inversione di rotta da un certo livello in poi, come nella curva del lavoro dipendente}
+        \end{itemize}
+    \item Moral Hazard (vedi sezione \ref{sec:moralHazard})
+    \item Auditing\footnote{Costi di verifica dei flussi di cassa del debitore}
+    \item Caratteristiche dell'impresa
+    \item Relazione banca-impresa
+    \item Regolazione bancaria
+\end{itemize}
+
+\section{Razionamento del credito Macroeconomico - Stiglitz-Weiss}
+
+La selezione avversa può spiegare perch ela curva di offerta si riduce all'aumentare del tasso di interesse, le imprese conoscono la propria rischiosita mentre le banche non conoscono la rischiosita delle imprese
+
+\subsubsection{Teoria di Stiglitz-Weiss}
+
+\begin{definition}
+    A tassi di interesse più elevati richiedono credito solamente debitori con una rischiositá più alta, la banca si rende conto di questo incentivo alla rischiositá e riduce l'offerta di credito
+\end{definition}
+
+Ipotesi 1:
+
+\begin{itemize}
+    \item \(N\) progetti richiedono finanziamento sul mercato del credito
+    \item Ogni profetto ha un costo pari a \(B\)
+    \item Ho un rendimento aleatorio pari a \(\widetilde{R} \) distribuito con Funzione di Densitá di probabilitá (P.d.f. - Probability Density Function) \(f(R,\infty):[0,\infty)\) dove \(\Theta\) indica la rischiositá del progetto
+    \item Progetti ordinabili in ordine di rischiositá: \(\Theta_1 \) indica un rischiosita minore di \(\Theta_2 \): più, \(\Theta\) è alto piùla distribuzione è dispersa, mantiene comunque una costante. \(\Theta\) è un cosiddetto \textit{Mean Preserving Spread}\footnote{In probabilitá e statistica, una mean-preserving spread (MPS) è un cambiamento tra una distriuzione di densità A ad un'altra funzione di densità B, dove B è formata partendo da una porzione distorta della funzione di densitá di probabilitá A}
+    \begin{align*}
+        &\int_{0}^{k} F_{\Theta}(R,\Theta) \,dR \geq 0 \forall k\\
+        &\int_{0}^{\infty} F_{\Theta}(R,\Theta) \,dR \geq 0
+    \end{align*}
+\end{itemize}
+
+Ipotesi 2:
+
+\begin{itemize}
+    \item La banca non può osserare la rischiositá del singolo progetto, quindi fissa un solo tasso di interesse \(\rho\) che propone ad ogni impresa
+    \item L'impresa che ottiene il credito di conseguenza deve ripagare \(R(1+\rho)\)
+    \item La banca richiede un collateral \footnote{garanzia al prestito} di valore pari a \(c\)
+    \item Settore bancario perfettamente competitivo, i profitti attesi della banca sono nulli
+    \item Banca e impresa sono neutrali al rischio:
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/2.jpg}
+    \caption{Profitti attesi della banca}
+    \label{fig:profittiAttesiBanca}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/3.jpg}
+    \caption{Profitti attesi dell'impresa}
+    \label{fig:profittiAttesiImpresa}
+\end{figure}
+
+Conseguenze:
+\begin{itemize}
+    \item In caso di default dell'impresa la banca subisce la maggior parte delle perdite
+    \item L'impresa è attratta da alti guadagni \textit{potenziali}
+\end{itemize}
+
+Ne consegue che chi chiede denaro non ha paura di perderlo poichè si tratta di denaro non appartenente all'imprenditore (che è colui che rischia) ma alla banca, l'imprenditore è protetto dalla responsabilitá limitata. Chi presta denaro non è attratto dagli alti guadagni dell'impresa perchè non gode dell'eventuale effetto leva positivo e inoltre ha paura di perdere la maggior parte del denaro che è presente nell'impresa (dato che appunto si tratta del finanziatore).
+
+\begin{theorem} \label{th:rischiositaImpresa}
+    Il profitto dell'impresa crescec on la rischiositá dell'impresa \(\Theta\) e si riduce all'aumentare del tasso di interesse \(\rho\)
+\end{theorem}
+
+Le imprese con più elevato \(\Theta\) ottengono profitti attesi più elevati perché hanno payoff più alti in caso di successo (ma meno probabili) di imprese meno rischiose, om casp do default entrambe le imprese perdono lo stesso valore (il collateral)
+
+\subsection{Domanda del credito}
+
+\[
+    \text{Domanda di credito} = D(R)
+\]
+
+Un'impresa chiede un finanziamento solo se ottiene un profitto atteso non negativo, dato il teorema \ref{th:rischiositaImpresa} si trova \(\Theta\) per cui
+
+\begin{align*}
+    E\left[\prod_F (\Theta^*)\right]=0
+\end{align*}
+
+\begin{itemize}
+    \item se \(\Theta<0\) allora \(E\left[\prod_F (\Theta)\right] < 0\) per cui non c'è domanda di credito
+    \item se \(\Theta>0\) allora \(E\left[\prod_F (\Theta)\right] > 0\) per cui c'è domanda di credito
+\end{itemize}
+
+\(\frac{\partial \Theta^*}{\partial \rho} > 0\) al crescere del tasso di interesse meno imprese, relativamente sempre più rischiose, domandando credito
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/4.jpg}
+\end{figure}
+
+\begin{theorem}
+    Esiste un tasso di interesse ottimo che massimizza la funzione di profitto atteso dell banca
+\end{theorem}
+
+Ne consegue che:
+
+\begin{itemize}
+    \item il profitto atteso della banca aumenta all'aumentare del tasso di interesse
+    \item a tassi più alti solo le imprese più rischiose domandano credito perché sono le uniche che hanno una redditivitá alta in caso di successo, la rischiositá media aumeta e il profitto medio diminuisce
+    \item la banca non osserva la rischiositá di ogni singola impresa ma la media di coloro che domandano credito (questa media appunto \(m\))
+\end{itemize}
+
+la banca è quindi invogliata ad aumentare il tasso di interesse,  per trovare \(p^*\):
+\begin{align*}
+    M_{ben}(\partial \rho) + M_{Cost}(\partial \rho) &= 0\\
+    M_{ben}(\partial \rho) = \frac{\partial E\left[\prod_B(\rho,\Theta)\right]}{\partial \rho} &> 0\\
+    M_{Cost}(\partial \rho) = \frac{\partial E\left[\prod_B(\rho,\overline{\Theta})\right]}{\partial \overline{\Theta}}\frac{\partial \overline{\Theta} }{\partial \rho} &< 0
+\end{align*}
+
+Visto che la rischiositá media di chi domanda credito \(\Theta\) cresce con \(\rho\) e che \(\frac{\partial E\left[\prod_B(\rho,\Theta)\right]}{\partial \Theta}<0\)
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.6\linewidth]{images/chapter2/5.jpg}
+    \caption{Payoff atteso della banca}
+    \label{fig:payoffBanca}
+\end{figure}
+
+Quindi trovato il \(\rho^*\) ottimo se si aumentano i tassi il profitto della banca scende perchè la banca sa che i progetti sarebbero più rischiosi al tasso di interesse il credito potrebbe essere razionato (offerta < domanda)
+
+\section{Razionamento del credito Macroeconomico - Bester-Hellwig}
+
+In questo caso è il moral Hazard (vedi sezione \ref{sec:moralHazard}) a spiegare perchè l'offerta di credito si riduce all'aumentare del tasso, per i creditori (banche) è difficile imporre un preciso impiego per i fondi prestati.
+
+\subsubsection{Teoria di Bester-Hellwig}
+
+Ipotesi 1:
+
+\begin{itemize}
+    \item N imprese
+    \item ogni impresa ha bisogno di un finanziamento per investire in un progetto di grandezza \(1\)
+    \item Molte banche perfettamente competitive. Profitto atteso pari a 0
+    \item Tutti gli attori sono risk neutrale
+    \item Il tasso risk-free è \(r_f=0\)
+    \item Ogni impresa sceglie tra due categorie:
+        \begin{itemize}
+            \item Impresa buona: paga \(G\) con probabilitá \(\pi_G<1\) oppure \(0\) se fallisce
+            \item Impresa cattiva: paga \(B\) con probabilitá \(\pi_B<1\) oppure \(0\) se fallisce
+        \end{itemize}
+    \item Solo l'impresa buona ha NPV (Net Present Value) positivo, quindi \(\pi_BB<1<pi_GG\)
+    \item La tecnologia cattiva è più rischiosa: \(B>G\) quindi \(\pi_B<\pi_G\)
+    \item L'impresa non ha altre fonti di reddito quindi se il progetto fallisce ripaga 0
+    \item Se il progetto ha successo l'azienda ripaga un importo fisso \(R\) che è il valore nominale (capitale + interessi) del debito
+    \item L'azienda sceglie la tecnologia dopo la firma del contratto (Moral Hazard), 
+\end{itemize}
+
+occorre quindi avere una ocmpatibilitá degli incentivi per poter fare la scelta migliore, l'impresa sceglie G solo se:
+    \begin{equation}
+        \begin{split}
+            \pi_G(G-R) &\geq \pi_B(B-R)\\
+            R & \frac{\pi_GG-\pi_BB}{\pi_G-\pi_B}\\
+            R &\leq \widehat{R} 
+        \end{split}
+    \end{equation}
+Per un \(R\) sufficientemente basso la banca si aspetta di essere ripagata con \(\pi_GR\), per \(R>\widehat{R} \) la banca si aspetta di essere ripagata con \(\pi_BR\)
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.6\linewidth]{images/chapter2/6.jpg}
+    \caption{Rimborso atteso del capitale prestato dalla banca}
+    \label{fig:rimborsoAtteso}
+\end{figure}
+
+\subsection{Offerta del credito}
+\[
+    \text{Offerta di credito} = S(R)
+\]
+
+Si distinguono 2 casi:
+\begin{enumerate}
+    \item Offerta infinitamente elastica di fondi \(S(R)\) da parte dei depositanti
+    \item \(S(R)\) cresce con \(R\)
+\end{enumerate}
+
+\subsubsection{Caso 1: \(S(R)\) perfettamente elastica}
+
+\begin{itemize}
+    \item L'offerta si aggiusta per coprire la domanda per qualsiasi \(R\)
+    \item Si fissa un rimborso atteso \(\rho^*\) che corrisponde dato che le banche sono perfettamente competitive ad un profilo nullo
+    \item La banca ottiene \(\rho^*\) fissando un rimborso normale \(R\)
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.6\linewidth]{images/chapter2/7.jpg}
+            \caption{Interessi \(R_1\) ed \(R_2\)}
+            \label{fig:r1r2}
+        \end{figure}
+        \begin{itemize}
+            \item \(R_1\) è l'interesse minimo per scegliere \(G\)
+            \item \(R_2\) è l'interesse minimo per scegliere \(B\)
+        \end{itemize}
+    \item Dato \(R_1\) il numero totale di progetti con tecnologia \(G\) determina la domanda totale di fondi (\(D(R_1)\))
+    \item Dato \(R_2\) il numero di progetti implementati con tecnologia \(B\) determina la domanda totale di fondi \(D(R_2)\)
+    \item Sia nel caso \(R_1\) che nel caso \(R_2\) l'offerta copre la domanda
+\end{itemize}
+
+\subsubsection{Caso 2: \(S(R)\) crescente con \(R\)}
+
+\begin{itemize}
+    \item L'offerta dei depositanti è più alta quando \(R\) è alto
+    \item La banca seleziona un valore di \(\widehat{R}\) dove è atteso un \(\rho^*\) massimizzato
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.7\linewidth]{images/chapter2/8.jpg}
+    \end{figure}
+    \item La domanda \(D(\widehat{R})\) dipende dal numero di imprese che investono nella tecnologia di tipo \(G\) e anche dalle risorse interne \(a\)
+    \item L'offerta dei depositanti cresce con \(R\)
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.7\linewidth]{images/chapter2/9.jpg}
+            \caption{Razionamento in equilibrio}
+            \label{fig:razionamentoEquilibrio}
+        \end{figure}
+\end{itemize}
+
+Nel caso della figura \ref{fig:razionamentoEquilibrio} il razionamento nel punto \(D(\widehat{R})\) è in equilibrio ma non sempre questo accade:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/10.jpg}
+    \caption{Razionamento non in equilibrio}
+    \label{fig:razionamentoNonEquilibrio}
+\end{figure}
+
+In questa situazione può anche essere che \(\widehat{R}\) non sia un massimo globale ma solo un massimo locale:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/11.jpg}
+    \caption{\(\widehat{R} massimo locale\)}
+    \label{fig:RmassimoLocale}
+\end{figure}
+
+\section{Il ruolo dei collateral come garanzia}
+
+Questa teoria dei collateral si basa interamente sull'ipotesi che la distribuzione della rischiositá delle imprese non sia nota alle banche, le banche possono proporre contratti piu complessi che richiedono, oltre al tasso \(r\), anche la garanzia di un collateral di valore \(c\). In questo modo le imprese più rischiose (e che sanno di esserlo), sono consapevoli di avere più probabilitá di perdere il collateral, ci sono quindi meno imprese rischiose che ricorrono al credito. La responsabilitá limitata è in contrasto con il collateral, di cui l'impresa è responsabile.
+
+\subsection{Teoria di Bestar}
+
+Esistono le seguenti ipotesi:
+\begin{enumerate}
+    \item Ogni impresa h aun progetto che costa \(I\) fisso
+    \item ci sono 2 tipologie di progetto:
+        \begin{itemize}
+            \item rischioso: tipo \(B\)
+            \item meno rischioso: tipo \(G\)
+        \end{itemize}
+    \item Ogni impresa ha bisogno di una quantitá di denaro \(B\)
+    \item \(\widehat{R}\) è un ritorno dell'investimento aleatorio
+        \begin{align*}
+            F_1(R):\left[0,R\right]&, i=a,b\\
+            E\left[\widehat{R_a}\right]&=E\left[\widehat{R_b}\right]\\
+            \int_{0}^{k} \left[F_b(R) - F_a(R)\right] \,dR \geq 0 \forall k\geq 0 
+        \end{align*}
+    \item Banche competitive con prifitto atteso pari a 0
+    \item Ogni banca propone un menú di contratti \[\gamma_i=(r_i,c_i), i=a,b\]
+    \item ogni contratto \(\gamma_i\) ha un tasso di interesse \(r_i\) con un collateral \(c_i\)
+    \item l'impresa \(i=a,b\) ha un profitto atteso, se accetta \(\gamma\) pari a:
+        \[
+            \prod_i(\gamma)=E\left[\max\{\widehat{R_i}-(1+r)B-k\times c, -(1-k)c\}\right]
+        \]
+        dove \(k\) è il costo della collateralizzazione per l'impresa
+    \item la banca ha un profitto atteso
+        \[
+            \rho_i(\gamma)=E[min{(1+r)B,\widehat{R_L}+c}-B]  
+        \]
+    \item un'impresa di tipo \(a\) (rispettivamente \(b\)) sceglie un contratto \(\gamma_a\) (rispettivamente \(\gamma_b\)) se e solo se:
+        \begin{align*}
+            \prod_a(\gamma_a) &\geq \prod_a(\gamma_b)\\
+            \prod_b(\gamma_b) &\geq \prod_b(\gamma_a)
+        \end{align*}
+        In questi casi è possibile affermare che il menù di contratti è \textit{compatibile con gli incentivi}. Si osserva se esiste una soluzione in cui un'impresa seleziona dei contratti compatibili con gli incentivi e se offrirli è ottimale per le banche. Queste solulzioni si chiamano \textit{Equilibri separati}
+\end{enumerate}
+
+\subsubsection{Curva di isoprofitto di un'impresa}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/12.jpg}
+    \caption{Curva di isoprofitto}
+    \label{fig:isoprofitto}
+\end{figure}
+
+\(bb'\) è più ripido rispetto a \(cc'\) perchè l'impresa \(a\) va in default con meno probabilitá rispetto all'impresa \(b\), quindi è più probabile paghi gli interessi. Nell'impresa \(b\) quindi lo stesso aumento di interesse \(r\) deve essere compensato da una riduzione più grande di \(c\).
+
+\subsubsection{Zero Profit Locus della banca}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/13.jpg}
+    \caption{Curva di Zero Profit Locus}
+    \label{fig:zeroprofitlocus}
+\end{figure}
+
+la curva di zero profit locus delle banche ha una pendenza minore della curva di isoprofitto delle imprese perchè una unitá di collateral costa più all'impresa che alla banca, se la richiesta di collateral aumenta di un'unitá allora l'impresa ha bisogno di una riduzione del tasso di interesse \(r\) per stare in isoprofitto che è più grande di quella che da alla banca lo steso profitto atteso (=0)
+
+\subsubsection{Equilibri separati}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/14.jpg}
+    \caption{Equilibrio separato}
+    \label{fig:equilibrioseparato}
+\end{figure}
+
+\(\gamma_a^*\) e \(\gamma_b^*\) definiscono un \textit{equilibrio separato} solo nelle seguenti condizioni:
+
+\begin{enumerate}
+    \item Compatibilitá degli incentivi:
+        \begin{align*}
+            \prod_a(\gamma_a^*) \geq \prod_a(\gamma_b^*)\\
+            \prod_b(\gamma_b^*) \geq \prod_b(\gamma_a^*)
+        \end{align*}
+    \item la banca non può proporre un'altro menù di contratti dominante rispetto a quello di prima:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.7\linewidth]{images/chapter2/15.jpg}
+            \caption{Confronto tra impresa \(b\) e impresa \(a\)}
+            \label{fig:confrontoab}
+        \end{figure}
+        In figura \ref{fig:confrontoab} si nota come l'impresa \(b\) sia indifferente tra \(\gamma_b^*\) e \(\gamma_a^*\) e come l'impresa \(a\) preferisca \(\gamma_a^*\) a \(\gamma_b^*\) perchè giace su una curva di isoprofitto inferiore
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=.7\linewidth]{images/chapter2/16.jpg}
+        \end{figure}
+        Se la banca offre il menù 1 attrae entrambi gli imprenditori (non è una curva di isoprofitto), se la banca offre la curva 3 attrae solo l'impresa di tipo \(b\), se la banca offre il menù 2 o 4 o le imprese non partecipano o le banche hanno profitto \(>0\) (non è quindi un equilibrio competitivo)
+\end{enumerate}
+Si conclude la teoria di Bester dicendo che se esiste l'\textit{equilibrio separato} allora la banca può segliere tra le imprese di tipo \(a\) e le imprese di tipo \(b\), le imprese di tipo diverso sceglieranno contratti di tipo diverso a seconda per esempio della loro rischiositá. La banca garantisce profitti nulli all'equilibrio, di conseguenza non c'è razionamento del credito.
+
+I collateral non risolvono completamente il problema di selezione avversa e razionamento del credito:
+\begin{enumerate}
+    \item \textit{Wealth constraints}: Il valore dei collateral richiesto in \textit{equilibri separati} potrebbe essere superiore a ciò che l'imprenditore può offrire
+    \item \textit{Pooling} di un sottoinsieme di imprese: ogni qualvolta la banca non distingue tra impresa con risciositá diversa si può avere razionamento del credito
+    \item se ci sono più di 2 tipi di imprese un menù di contratti specificanti non è sufficiente a generare equilibri separati
+    \item l'asimmetria informativa tra banca e impresa è maggiore quando la banca lavora da poco tempo con l'impresa, quindi nel caso di \textit{arm lenght banking}, con contrapposizione con il \textit{relationship banking}
+\end{enumerate}
+
+\subsection{Situazione in Italia}
+
+In italia è prsente un basso ricorso ai mercati finanziari, le PMI\footnote{Piccole e Medie Imprese} soo protagoniste del mercato quindi è abitudie fare ricorso alle agglomerazioni, sono presenti diseconomie organizzative. Dalla metá degli anni 90 i distretti sono andati in crisi e le conseguenti debolezze furono molteplici:
+\begin{itemize}
+    \item Carenza di struttura patrimoniale
+    \item Opacitá amministrativa
+    \item Scarsa massa critica per poter fare un salto dimensionale e mobilitare le risorse di ricerca, sviluppo e innovazione
+    \item Incertezze nel passaggio generazionale
+    \item Insufficiente disciplina finanziaria
+\end{itemize}
+In sintesi è stata protagonista la bassa produttivitá accompagnata da un alto rischio finanziario. Possibili soluzioni potrebbero essere:
+\begin{itemize}
+    \item Riorganizzazione
+    \item Internazionalizzazione
+    \item Trasparenza, professionalitá, business planning
+    \item Ricapitalizzazione
+    \item Riduzione Moral Hazard
+\end{itemize}
+
+Ci sono moltissime informazini richieste dalla banca sulla gestioe operativa tra cui il quoziente di indebitamento, il tasso di copertura degli oneri finanziari, il ROS, il PCI, il ROE, i vari quozienti di struttura, il Budget previsionale economico, finanziario, il piano degli investimenti e il conto economico prospettico. In base a questi documenti si effettua una valutazione del credito basata su:
+\begin{itemize}
+    \item Entitá delle fondi di finanziamento esterne
+    \item Gestione finanziaria
+    \item Garanzie:
+        \begin{itemize}
+            \item Reali: vincoli su uno o più beni
+            \item personali: patrimonio dell'imprenditore
+            \item Covenants: accordi tra impresa e bache per evitare gestioni rischiose
+            \item Collettive: confidi e microcredito centrale
+        \end{itemize}
+    \item Informazioni sui rapporti dell'impresa con il sistema bancario:
+        \begin{itemize}
+            \item accordato complessivo
+            \item utilizzato complessivo
+            \item banca principale
+            \item utilizzo consulenza offerta dalle banche
+        \end{itemize}
+\end{itemize}
+
+Ne derivano diversi rapporti di relazione tra banca e imprese:
+\begin{itemize}
+    \item \textit{arm lenght banking} o multiaffidamento: ogni impresa ha rapporti creditizi con tante banche, nessun rapporto stretto con una sola banca, límporto è modesto e il rapporto è basato sulla sfiducia reciproca, quindi ci vogliono garanzie, il \textit{Vantaggio} è che la banca diversifica molto e le imprese sono molto flessibili e hanno rapporti con banche in concorrenza che fanno prezzi più bassi
+    \item \textit{Relationship banking} o Housebank: c'è una banca di riferimento che si fida e fa dei sacrifici con le banche che consigliano, le banche fanno dei sacrifici per le iprese, meno asimmetria informativa
+\end{itemize}
+
+Misurare il razionamento è difficile perchè non si conosce l'aggregato della domanda, sarebbe necessario chiedere ad ogni singolo imprenditore, ovviamente questo non è realizabile, l'unica cosa di cui si è a conoscenza sono gli scambi effetivi in un determinato istante. È possibile però guardare l'entitá della variazione degli investimenti al variare della tesoreria (relazione \textit{Fazzori-Hubbard}). La misura è comunque approssimativa perché se gli imprenditori vogliono comunque investire con risorse interne anzichè ricorrere al credito per qualche motivo il ragionamento crolla.
+
+Quelo che si può fare è misurare il livello di credito, chiedere alle imprese se a qeul tasso avrebbero voluto più credito si possono fare dei ragionamenti su quella evoluizione in Italia.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/17.jpg}
+    \caption{Credito alle imprese negli anni in Italia}
+    \label{fig:creditoItalia}
+\end{figure}
+
+Nel 2011 esplode il problema del debito sovrano, da allora le cose non si sono mai totalmente riprese
+
+Dividendo per idmensioni di imprese anzichè di settori si può osservare:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/18.jpg}
+\end{figure}
+
+La linea delle imprese con \(<20\) addetti sembrano soffrire di più, il credito erogato si riduce, si cerca quindi di capire sesia dovuto ad una questione di domanda o di offerta osservanod il grafico della domanda
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/19.jpg}
+    \caption{Domanda di credito}
+    \label{fig:domanda}
+\end{figure}
+
+L'istogramma \textit{imprese} ci dice che il numero di imprese micro (da 0 a 9 addetti) si è ridotto negli anni. In generale le microimprse sono quelle che hanno sofferto maggioramente la domanda di credito ma il dato non è per forza correlato, è possibile solo intuirlo. La riduzione degli investimenti in figura \ref{fig:domanda} non sembra però essere dovuta al razionamento del credito
+
+Si osservi ora il grafico dell'offerta:
+
+\begin{figure}[H]
+            \centering
+            \includegraphics[width=.7\linewidth]{images/chapter2/20.jpg}
+            \caption{Offerta di credito}
+        \end{figure}
+
+anche in questo caso le microimprese soffrono di più il razionamento.
+
+Si cerca ora di capire un ulteriore classificazione in base all'entitá degli investimenti in determinate tecnologie:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/21.jpg}
+    \caption{Investimenti in tecnologie}
+    \label{fig:tecnologie}
+\end{figure}
+
+è importante anche il tipo di investimento, se si tratta di un investimento altamente specifico e tecnologico il razionamento è più alto, questo significa che alle impreese più altamente tecnologiche è stato rifiutato il credito anche quando il tasso era più alto. Intuitivamente sarebbe dovuto essere il contrario.
+
+Si osservi ora l'immagine che contenga la composizione dei due indici: il numero di addetti e l'entitá degli investimenti in alta tecnologia:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/22.jpg}
+    \caption{Numero addetti + Investimenti alta tecnologia}
+    \label{fig:addettitecnologia}
+\end{figure}
+
+Anche in questo caso si nota che il credito è maggiormente razionato se l'investimento è ad alta tecnologia, le imprese piccole inoltre aggravano ulteriormente la situazione. Si ricorda che il razionamento glovale è pari solo all'8\% circa.
+
+Si noti ora la relazione tra \textit{grandezza dell'impresa} e  \textit{rischiositá} e si analizzi la variazione percentuale dei prestiti
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter2/23.jpg}
+    \caption{Numero addetti + Rischiositá}
+    \label{fig:addettiRischiosita}
+\end{figure}
+
+Osservando solo gli istogrammi \textit{sinistri} nelle coppie, si nota che nuovamente sono le microimprese a soffrire di più di queste variazioni. In base alla rischiositá, le imprese ad alto rischio hanno risultati peggiori e in questo caso il risultato è anche intuitivo.
+
+Osservando ora il ruolo dei collateral:
+
+\begin{minipage}[t]{.45\linewidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.9\linewidth]{images/chapter2/24.jpg}
+        \caption{Imprese con \(<20\) dipendenti}
+        \label{fig:impresemenoventidipendenti}
+    \end{figure}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.45\linewidth}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.9\linewidth]{images/chapter2/25.jpg}
+        \caption{Imprese con \(>20\) dipendenti}
+        \label{fig:impresepiuventidipendenti}
+    \end{figure}
+\end{minipage}
+
+chiaramente i collateral sono importanti, si nota che l'impatto delle garanzie nelle microimprese deve essere sempre praticamente pari al valore del credito mentre per le imprese più grandi è sufficiente un collateral con un valore di 80 su un credito del valore di 90.
+
+Questo discorso è facilmente collegabile al tipo di rapporto impresa-banca esistente: in Italia \textit{arm lenght}, basato sulla sfiducia. Svantaggioso quindi in misura maggiore per le piccole imprese come facilmente visualizzabile dal seguente grafico:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.9\linewidth]{images/chapter2/26.jpg}
+    \caption{quota di credito garantito}
+    \label{fig:quotacreditogarantito}
+\end{figure}
+
+SI dimostra quindi empiricamente che i collateral sono fondamentali
+
+\subsubsection{Conclusioni}
+
+Ci sono tre dimensioni fondamentali che influenzano il razionamento del credito che rimane comunque difficile da valutare e misurare:
+\begin{enumerate}
+    \item Dimensione dell'impresa \(\downarrow \)
+    \item Investimento in alta tecnologia \(\uparrow \)
+    \item Rischiositá \(\uparrow \)
+\end{enumerate}
+
+Le frecce in alto indicano una relaizone di proporzionalitá diretta mentre le frecce in basso indicato una proporzionalitá inversa
+
+È sempre importante agevolare la comunicazione tra banca e imprese, più la comunicazione è efficiente e meno frizioni ci sono.
+
+
 
