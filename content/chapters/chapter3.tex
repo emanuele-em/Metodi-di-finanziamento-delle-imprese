@@ -1,0 +1,135 @@
+\chapter{Banche e Valute: dinamiche, regolamentazioni e come approcciare}
+
+\label{sec:Bancheevalute}
+
+\section{Banche}
+
+le banche sono allocatori di risorse, raccolgono il risparmio privato e lo allocano, è un business di leva, analizzando il bilancio di una qualsiasi banca si può notare come la disponibilitá liquida sia molto limitata (<5\%), il passivo è per la maggior parte composta da risparmio di famiglie e imprese. Questo crea una forte crisi di liquiditá intrinseca data da una forte differenza di tempo tra attivitá e passivitá con la raccolta a breve termine di impieghi a lungo termine.
+
+Dalla crisi del 2008\footnote{Nel 2008 ci fu un esempio molto valido di BankRun} si è capito che la finanza ha troppo peso nei paesi, così tanto peso da creare il cosiddetto \textit{too big to fail}: ricatti da parte delle banche nei confronti della nazione. Nel 2008 la crisi partita negli USA ha causato il fallimento della Leman Brothers e il salvataggio o il cambio di gestione di altre banche considerate più solide (o meno ostili). Occorreva ricreare la fiducia per evitare la corsa allo sportello (bank run). Una volta scoppiata la crisi, le autoritá avevano più possibilitá di trovare una soluzione al problema: le banche erano così grandi da portare al falilmento intere nazioni\footnote{Esempio riscontrabile nel caso Irlanda e Spagna o oltreoceano nel caso di Argentina} o causare grandi crisi del debito sovrano\footnote{Nel caso di Italia, Grecia e Portogallo}, nessuno era più intenzionato a portare altro denaro a questi paesi iper indebitati.
+
+Dal 2008 si richiede un cuscinetto di liquiditá molto più ampio alle banche. Si è visto nel tempo che la volatilitá mmedia di un c/c è stabile entro 7 anni in media, mentre la volatilitá del mercato finanziario è molto più alta
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter3/1.jpg}
+    \caption{Analisi di volatilitá}
+    \label{fig:volatilita}
+\end{figure}
+Dopo un accordo stipulato a Basilea si è deciso di aumentare l'importo obbligatoriamente allocato dei depositi, dal 4\% al 10\%. Questa misura preventiva ha avuto un effetto molto positivo, a prova di questo è bastato osservare la reazione delle banche alla grandissima crisi Pandemica del 2020 - 2021, le banche in questa situazione sono riuscite a sopravvivere più che dignitosamente.
+
+\subsection{Protezione dei depositi}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter3/2.jpg}
+    \caption{Situazioni bancarie con attivo uguale e tre situazioni differenti di passivo}
+    \label{fig:confrontobanche}
+\end{figure}
+La banca più rischiosa è la terza, se le perdite sono più di €5 allora viene erosa la quota dei depositanti, la situazione migliore è la 1. Per evitare il caso 3 sono introdotte le regolamentazioni bancarie, per ogni banca sono presenti diversi livelli come garanzie a seconda del rischio
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter3/3.jpg}
+    \caption{Livelli di rischio e cuscinetti di garanzia}
+\end{figure}
+Per primo si va ad intaccare il \textit{Common Equity TIER 1}. Per effettuare attivitá bancaria ci sono due requisiti più o meno stringenti che ogni banca deve dimostrare di rispettare anno per anno: lo SREP\footnote{Supervisory Review and Evaluation Process: è il processo di revisione e valutazione prudenziale svolto dall'Autorità di vigilanza per valutare e misurare i rischi a livello di singola banca} è il primo livello di difesa e il MREL\footnote{minimum requirement for own funds and eligible liabilities} rappresenta un'ulteriore protezione nel caso in cui vengano intaccati i depositi, evento al giorno d'oggi mai accaduto in nessun paese.
+
+Il peccato originale di questa regolamentazione è stata la sua applicazione ex-post rispetto alla crisi del 2008, il governo italiano è stato più che altro quello di un ulteriore aumento del debito pubblico, le banche italiane non avevano investimenti in junk bond americani, il caso italiano è stato caratterizzato più da una questione di spread dei BTP, andando alle stelle ha portato lo stato ad una crisi di liquiditá molto grave. In Italia la crisi è arrivata in ritardo, causato da un problema di finanziamento per le imprese. I risparmiatori subirono delle perdite ma solo in seguito a dei comportamenti truffaldini delle banche, architettarono un metood per convincere i risparmiatori della fungibilitá dei depositi e degli investimenti nei titoli della banca, alcuni investitori, convinti di questo investirono in titoli della loro banca e aumentarono ulteriormente il rischio di investimento.
+
+\begin{conditions*}
+    CET & Common Equity Tier 1\\
+    RWA & Risk Weight Asset, è la somma dell'ammontare del rischio di ogni singola attivitá: \[\sum_{i=1}^N\alpha_iE_i\] dove \(\alpha_i\) corrisponde all'ammontare dell'attivitá mentre \(E_i\) corrisponde al peso del rischio per ogni attivitá. Copre il rischio delle attivitá, è importante per capire l'etitá del capitale richiesto, più rischio ha la banca più capitale è richiesto. Ogni vanca internamente ha ei meccanismi per stimare il coefficiente di rischio da attribuire ad ogni persona che richiede il prestito.\\
+    \text{Capital Required} & \(r\times RWA\), le banche devono minimizzare sia \(r\), sia \(RWA\), quindi sia il moltiplicatore sia il livello di assorbimento degli attivi. È la regolamentazione a settare gli standard di valutazione del rischio (il peso), quindi è tutto affetto da decisioni politiche, spesso si nota un \(RWA\) pari a 0 nel debito sovrano e questo rappresenta chiaramente una anomalia, anche storicamente. Si sarebbe dovuta completare un'unione bancaria europea ma di fatto non è mai stato fatto impedendo, in questo modo, una vera diversificazione. Gli stati con altissimo debito (come l'Italia) hanno sempre approfittato di questo.
+\end{conditions*}
+I modelli interni funzionano on la perdita attesa absata sull'esposizione al default. La \(Exposure to Default\) è basata sul \textit{Lost Given Default(LGD)}, è possibile avere anche rischi molto alti ma è dipendente anche dai collateral:
+\begin{equation}
+    L=f(EAD,PD,LGD)
+\end{equation}
+\begin{conditions*}
+    EAD & Exposure To Default\\
+    PD & Probability to Default\\
+    LGD & Loss Given Default\\
+\end{conditions*}
+
+Per la stima di PD e LGD c'è un approccio standard.
+\[
+    RWD = \overline{X}    
+\]
+dipende quindi dalla media di tutto il sistema.
+
+Le banche attualmente hanno capito come minimizzare l'assorbimento del credito, a volte vengono obbligate a ritararsi, nel caso in cui vengano scoperte a modidifcare troppo i dati a loro favore.
+
+\subsection{Operational Risk}
+
+Matrice con due componenti, si guarda quanto è complessa la composizione dei ricavi \[OpRisk=f(\text{Income}^+, \text{Historical Losses}^+)\]
+più è grande l'income della banca epiù sono grandi le perdite storiche della banca più è alto il rischio di imbattersi in perdite future. Per calcolare i vari parametri occorre ricordare che \(BIL=BI\times \alpha_i \rightarrow \text{Bank income}=Interests + Fee + dividends + trading\), mentre \(ILM = \text{Internal Loss Multiplier}=f(\text{Loss Component}^+, BIC^-)\), sapendo che \textit{Loss component} corrispondono a 15 volte le perdite medie storiche degli ultimi 15 anni.
+\[
+  Loan^T=Principal+\sum_{t=1}^T\left(Principal\times r_t\right) \rightarrow \text{Interest Rate}  
+\]
+lavorando nella tesorreria delle aziende occorre capire il parametro \(r_t\) per capire il prezzoo.
+
+\subsection{overview of banking Risk}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\linewidth]{images/chapter3/4.jpg}
+    \caption{Buffer di capitale}
+\end{figure}
+
+\begin{conditions*}
+    CCB & Quando le imprese crescono troppo aumentano i capitali per rallentare la crescita\\
+    \text{Pillar 2R} & Sta per pillar 2 Requirement\\
+    \text{Pillar 1} & è Costante per tutti\\
+    \text{Pillar 2G} & Pillar 2 Guidance, non è un vincolo ma una indicazione, se non si ha questo buffer allora si procede con una revisione ma non è vincolante\\
+\end{conditions*}
+La somma di tutti i buffer indica quanto le banche devono mettere da parte
+
+\subsection{Corporate solutions}
+
+Le banche non sono il modello migliore di debito per tutte le imprese, mano a mano che un'impresa cresce può aver bisogno di tipi diversi di finanziamenti, con la digitalizzazione, l'accesso alla informazione diventa più pratica, il vantaggio delle banche è quindi sempre meno fondamentale, occorrerá spacchettare le imprese regolamentate da quelle non regolamentate, quelle non regolamentate devono essere a bassissimo rischio, mentre quelle regolamentate potranno sbizzarrirsi.
+
+\section{Criptovalute}
+
+La moneta è:
+\begin{itemize}
+    \item Mezzo di scambio
+    \item Riserva di valore
+    \item Unità di conto
+\end{itemize}
+C'è sempre stato un legame con un sottostante che inizialmente poteva essere l'oro. Con Brethan Woods c'è stata necessitá di stampre sempre più monteta creando così le FIAT.
+
+Ci sono moltissimi tipi di valuta, tutti i giorni ne vengono manipolati molti e vengono scambiate tra loro, es. lo scambio tra valute commerciali e valute di banca centrale, nel farlo gli € depositati possono essere reali e riskfree (contante garantito dalla banca centrale) e vengono convertiti in valuta digitale (garantiti dalle banche commerciali). Nelle valute digitali la stessa fiducia che, con le valute standard, si riponeva nelle banche centrali, viene riposta nell'algoritmo che sostituisce quindi l'istituzione. Una via di mezzo si era trovata in Facebook con il progetto \textit{Libra}, in cui a garantire l'entrata era appunto una entitá privata.
+
+\subsection{Central Bank Digital Currency}
+
+ci sono 3 tipologie di CBDC:
+\begin{enumerate}
+    \item Direct CBDC: il rapporto tra depositanti e banche centrali è diretto, le banche centrali prenderebbero i depositi direttamente
+    \item Hybrid CBDC: Come intermediario tra banche centrali e privati, c'è una banca commerciale
+    \item Indirect CBDC: la differenza con la banca Hybrid è che anche il rapporto legale è intermediato
+\end{enumerate}
+
+\subsection{Applicazioni concrete}
+
+Digital Currency Cinese: Digital \textit{Renminbi}, la Cina è sempre stata leader nel settore dei pagamenti, La Cina molto infastidita da delle societá cinesi che avevano il controllo dei pagamenti decide di estromettere queste societá dal controllo dei pagamenti. Agli inizi del Febbraio 2022 la Cina ha siglato un accordo con la Russia per adottare in Russia il sistema di pagamento cinese.
+
+L'esempio di Facebook con il \textit{Libra}, un sistema centralizzato basato su blockchain, figlio di Facebook, rispetto a blockchain è appunto centralizzato quindi bisogna avere fiducia nelle societá con risvolti preoccupanti per la democrazia, il G7 ha reagito in maniera violenta, affermando che nessua stablecoin sarebbe potuta circolare legalmente fino a quando il sistema non sarebbe stato regolamentato.
+
+Per rispondere al mercato Cinese invece è stato necessario creare una valuta digitale europea, gli Euro Digitali. La sfida è capire quanto poter rinunciare in termini di decentralizzazione per poter performare molte transazioni nel modo comunque più decentralizzato possibile. Una sorta di Trade Off ottimale tra decentralizzazione e performance.
+
+\subsubsection{Obiettivi}
+
+L'unione europea vuole creare la valuta di riferimento per l'economia sostenibile con il digital Euro. Inizialmente voleva solo creare una nuova valuta digitale senza questa vision. Attualmente si cerca di capire quale sia il limite massimo per ogni persona nella detenzione di qeusta moneta, la banca europea vuole creare un sostituto digitalizzato al contante, quindi deve essere gratuito e liquido per definizione. Con la valuta digitale si avrebbe una moneta programmabile, sarebbe quindi possibile andare a fare politica fiscale atomica\footnote{persone per persona} evitando il cosiddetto Helicopter Money\footnote{Soldi regalati a determinate categorie selezionate a livelli macro, quindi una redistribuzione spesso ingiusta}. l'euro digitale potrebbe creare la vera unione finanziaria europe. La pandemia ha accellerato di netto la crescit della Cina nei confronti degli USA. La nuova guerra fredda verrá combattuta per:
+\begin{itemize}
+    \item Semiconduttori
+    \item 5G
+    \item Terre rare
+    \item Valute
+    \item Social Media
+\end{itemize}
+Ogni potenza dominatrice ha sempre usato la valuta come arma principale, gli USA, avendo il dollaro come strumento principale hanno da sempre potuto finanziarsi a tassi molto più bassi degli altri stati che dovevano usare comunque il dollaro. \textit{Swift}\footnote{Society for Worldwide Interbank Financial Telecommunication} è un sistema monopolistico di messaggistica di denaro, si utilizza all'interno di questo sistema il dollaro. Si è scoperto che gli USA spiarono tramite SWIFT le transazioni degli altri paesi dato che l'infrastruttura di SWIFT era negli USA, da allora sono stati costretti a decentralizzare le strutture anche in Belgio e altrove. SWIFT può essere utilizzato dai possessori per ingegnerizzare il fallimento di qualche paese (come accade nel 2022 in Russia), per questo motivo una moneta digitale potrebbe risolvere questo problema (basando il controllo all'algoritmo e non ad un sistema). Biden a Marzo 2022 ha preso due posizioni storiche:
+\begin{itemize}
+    \item Ha affermato che le valute digitali potrebbero essere un elemento fondamentale per l'indipendenza nazionale, dichiarando in pratica la morte di Swift
+    \item Ha affermato la necessitá di creare il dollaro digitale della FED con urgenza
+\end{itemize}

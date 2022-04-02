@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'summary.blg'
+[266] biber-MSWIN32:340> INFO - === 
+[361] Biber.pm:418> INFO - Reading 'summary.bcf'
+[660] Biber.pm:972> INFO - Found 0 citekeys in bib section 0
+[688] bbl.pm:654> INFO - Writing 'summary.bbl' with encoding 'UTF-8'
+[689] bbl.pm:757> INFO - Output to summary.bbl
+[689] Biber.pm:130> WARN - The file 'summary.bcf' does not contain any citations!
+[689] Biber.pm:132> INFO - WARNINGS: 1
